@@ -3,21 +3,27 @@
 console.log("hello");
 
 
-//document.writeln("hgjhgjhg");
+//document.writeln("ssssssssssssssssss");
 let stack1 = "";
-
+let N = 12;
 
 function PushOur() {
-    a = document.getElementById("pushValue").value;
-     stack1 = stack1 + ", " + a;
-    console.log(stack1);
-    document.getElementById("displayStack").textContent = stack1;
+
+    if (stack1.split(", ").length  <= N) {
+        a = document.getElementById("pushValue").value;
+        stack1 = stack1 + ", " + a;
+        console.log(stack1);
+        document.getElementById("displayStack").textContent = stack1;
+    }
+    else
+    {
+        alert("stack full");
+    }
 }
 
 function PopOur() {
 
-
-    if ( ! (stack1.split(', ') [stack1.split(', ').length - 1] === "")) {
+    if ( ! (stack1.split(', ').length  === 1)) {
         let tmpStack = "";
         alert("Pop element " + stack1.split(', ') [stack1.split(', ').length - 1]);
 
@@ -43,5 +49,6 @@ function SizeOur() {
 
 function ClearOur() {
     stack1 = "";
+    document.getElementById("displayStack").textContent = stack1;
     alert("Cleared ");
 }
